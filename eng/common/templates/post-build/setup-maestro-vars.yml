@@ -7,7 +7,10 @@ jobs:
   displayName: Setup Maestro Vars
   variables:
     - template: common-variables.yml
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1bc073fdb3d4cd4d3bc3e3969559ad2cb758138a
   pool:
     vmImage: 'windows-2019'
   steps:
@@ -27,7 +30,11 @@ jobs:
         targetType: inline
         script: |
           try {
+<<<<<<< HEAD
             if (!$Env:PromoteToMaestroChannels -or $Env:PromoteToMaestroChannel.Trim() -eq '') {
+=======
+            if (!$Env:PromoteToMaestroChannels -or $Env:PromoteToMaestroChannels.Trim() -eq '') {
+>>>>>>> 1bc073fdb3d4cd4d3bc3e3969559ad2cb758138a
               $Content = Get-Content $(Build.StagingDirectory)/ReleaseConfigs/ReleaseConfigs.txt
 
               $BarId = $Content | Select -Index 0
