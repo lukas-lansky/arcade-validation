@@ -65,7 +65,7 @@ Set-Location $(Get-Repo-Location $global:githubRepoName)
 
 Git-Command $global:githubRepoName commit -am "Arcade branch - version ${global:arcadeSdkVersion}"
 
-Git-Command $global:githubRepoName pull origin
+Git-Command $global:githubRepoName pull origin master
 
 Git-Command $global:githubRepoName push origin HEAD
 
