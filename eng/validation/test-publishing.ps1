@@ -65,8 +65,6 @@ Set-Location $(Get-Repo-Location $global:githubRepoName)
 
 Git-Command $global:githubRepoName commit -am "Arcade branch - version ${global:arcadeSdkVersion}"
 
-Git-Command $global:githubRepoName pull origin $global:targetBranch
-
 Git-Command $global:githubRepoName push origin HEAD
 
 # Verify that the build doesn't already exist in our target channel (otherwise we cannot verify that it was published correctly)
